@@ -1,0 +1,6 @@
+function start_Time_Stamped_Pressure_Acq()
+    [time_Stamps,data_Pts] = P = 51.7*typecast(uint8(pressure_Reader(3)),'single')
+    P = 51.7*typecast(uint8(pressure_Reader(3)),'single')
+    evalin('base',['ping_Pressure_List(ping_Pressure_List_Index) =', num2str(P),';']);
+    evalin('base','ping_Pressure_List_Index = ping_Pressure_List_Index+1;');
+end
